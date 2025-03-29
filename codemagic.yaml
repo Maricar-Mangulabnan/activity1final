@@ -1,10 +1,15 @@
 workflows:
   android-build:
-    name: Android Build
+    name: Android Alpha Release Build
     environment:
       flutter: stable
+      groups:
+        - signingConfig
     scripts:
       - flutter pub get
+      # Decode your keystore from base64 and create the keystore file
+      - echo $KEYSTORE_BASE64 | base64 --decode > $CM_BUILD_DIR/weather-release.keystore
+      - export KEYSTORE_PATH=$CM_BUILD_DIR/weather-release.keystore
       - flutter build apk --release
       - flutter build appbundle --release
     artifacts:
