@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.weather"
+    namespace = "com.bscs.weather"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -19,7 +19,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.example.weather"
+        applicationId = "com.bscs.weather"
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode
