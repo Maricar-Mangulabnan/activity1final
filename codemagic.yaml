@@ -7,9 +7,9 @@ workflows:
         - signingConfig
     scripts:
       - flutter pub get
-      # Decode your keystore from base64 and create the keystore file
-      - echo $KEYSTORE_BASE64 | base64 --decode > $CM_BUILD_DIR/weather-release.keystore
-      - export KEYSTORE_PATH=$CM_BUILD_DIR/weather-release.keystore
+      # Decode your keystore from base64 and create the keystore file at correct location
+      - echo $KEYSTORE_BASE64 | base64 --decode > $CM_BUILD_DIR/android/app/weather-release.keystore
+      - export KEYSTORE_PATH=$CM_BUILD_DIR/android/app/weather-release.keystore
       - flutter build apk --release
       - flutter build appbundle --release
     artifacts:
