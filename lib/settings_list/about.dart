@@ -20,7 +20,7 @@ class AboutPage extends StatelessWidget {
                 children: const [
                   CupertinoListTile(
                     leading: Icon(CupertinoIcons.person),
-                    title: Text('Maricar Mangulabnan'),
+                    title: Text('Kang Mangulabnan'),
                   ),
                   CupertinoListTile(
                     leading: Icon(CupertinoIcons.person),
